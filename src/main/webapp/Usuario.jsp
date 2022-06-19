@@ -1,7 +1,6 @@
 <%@page import="daos.UsuarioDAO"%>
 <%@page import="modelos.Usuario"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <%@ page import="java.util.List"%>
 
 <!DOCTYPE html>
@@ -27,7 +26,7 @@
         .title{
             height: 10vh;
             margin-top: 10px;
-            margin-left: 28vw;
+            margin-left: 14vw;
             align-items: center;
             text-align: center;
             font-size: 2.5rem;
@@ -160,6 +159,12 @@
             margin-left: 30px;
         }
 
+        .div_buton_reg1 {
+            align-items: flex-end;
+            display: flex;
+            margin-left: 13vw;
+        }
+        
         .but_Editar {
             background-color: #fac9c5;
             color: black;
@@ -185,22 +190,21 @@
     %>
     <body class="body" bgcolor="#e0766e">
         <div class="header">
-            <div class="div_buton_reg">
+            <div class="div_buton_reg1">
                 <a href="menu.jsp" class="but_com">Regresar</a>
             </div>
             <div class="title">
                 <h1>Usuarios</h1>
             </div>
+            <div class="div_buton_reg1">
+                <form method="GET" action="crearUsuario.jsp">
+                    <input type="hidden" name="permiso" value="true" />
+                    <input class="but_com" type="submit" value="Nuevo"  href=""/>
+                </form
+            </div>
         </div>
 
-
         <div class="fondo">
-            <div class="nuevo">
-                <form method="GET" action="crearUsuario.jsp">
-                    <input type="hidden" name="permiso" value="true"/>
-                    <input class="btn btn_crear" type="submit" value="Nuevo"  href="crearUsuario.jsp"/>
-                </form>
-            </div>
             <table>
                 <tr class="table-header">
                     <th>Usuario</th>

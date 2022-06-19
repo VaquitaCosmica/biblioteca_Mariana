@@ -29,7 +29,7 @@
         .title {
             height: 10vh;
             margin-top: 10px;
-            margin-left: 28vw;
+            margin-left: 7vw;
             align-items: center;
             text-align: center;
             font-size: 2.5rem;
@@ -111,24 +111,23 @@
             display: flex;
             margin-left: 30px;
         }
-
+        
         .div_buton_reg1 {
             align-items: flex-end;
             display: flex;
-            margin-left: 22vw;
+            margin-left: 7vw;
         }
 
         table {
             margin-top: 5px;
             table-layout: auto;
-            width: 95%;
+            width: 90%;
             border-collapse: collapse;
-            margin-left: 2%;
+            margin-left: 5%;
         }
 
-        th,
-        td {
-            padding: 20px;
+        th,td {
+            padding: 25px;
         }
 
         .table-header {
@@ -155,19 +154,20 @@
     %>
     <body class="body" bgcolor="#e0766e">
         <div class="header">
-            <div class="div_buton_reg">
+            <div class="div_buton_reg1">
                 <a href="menu.jsp" class="but_com">Regresar</a>
             </div>
             <div class="title">
                 <h1>Mantenimiento</h1>
             </div>
-            <form method="GET" action="MantenimientoServlet">
-                <input type="hidden" name="operacion" value="PRECREAR" />
-                <input class="btn btn_crear" type="submit" value="Nuevo"  href=""/>
-            </form            
+            <div class="div_buton_reg1">
+                <form method="GET" action="MantenimientoServlet">
+                    <input type="hidden" name="operacion" value="PRECREAR" />
+                    <input class="but_com" type="submit" value="Nuevo"  href=""/>
+                </form   
+            </div>
         </div>
         <div class="fondo">
-
             <table>
                 <tr class="table-header">
                     <th>ID</th>
@@ -180,21 +180,21 @@
 
                 <tr>
                     <% for (Cuida mantenimiento : mantenimientos) {%>
-                    <td class="celda"> <%= mantenimiento.getId_manto() %>
+                    <td class="celda"> <%= mantenimiento.getId_manto()%>
                     </td>
-                    <td class="celda"> <%= mantenimiento.getF_manto() %>
+                    <td class="celda"> <%= mantenimiento.getF_manto()%>
                     </td>
-                    <td class="celda"><%= mantenimiento.getId_mobiliario() %> 
+                    <td class="celda"><%= mantenimiento.getId_mobiliario()%> 
                     </td>
-                    <td class="celda"> <%= mantenimiento.getID_empleado() %>
+                    <td class="celda"> <%= mantenimiento.getID_empleado()%>
                     </td>
 
                     <td class="celda">                        
                         <!-- TODO: Usar ACTUALIZAR para esto. -->                       
                         <form method="GET" action="MantenimientoServlet">
                             <input type="hidden" name="operacion" value="PREACTUALIZAR" />
-                            <input type="hidden" name="id_manto" value="<%=  mantenimiento.getId_manto()  %>" />
-                            <input type="hidden" name="f_manto" value="<%= mantenimiento.getF_manto() %>" />
+                            <input type="hidden" name="id_manto" value="<%=  mantenimiento.getId_manto()%>" />
+                            <input type="hidden" name="f_manto" value="<%= mantenimiento.getF_manto()%>" />
                             <input type="hidden" name="id_mobiliario" value="<%= mantenimiento.getId_mobiliario()%>" />
                             <input type="hidden" name="ID_empleado" value="<%= mantenimiento.getID_empleado()%>" />
                             <input class="btn but_Editar" type="submit" value="Editar"/>
@@ -204,7 +204,7 @@
 
                         <form method="GET" action="MantenimientoServlet">
                             <input type="hidden" name="operacion" value="ELIMINAR" />
-                            <input type="hidden" name="id_manto" value="<%= mantenimiento.getId_manto() %>" />
+                            <input type="hidden" name="id_manto" value="<%= mantenimiento.getId_manto()%>" />
                             <input class="but_Eliminar" type="submit" value="Eliminar" />
                         </form>
                     </td>

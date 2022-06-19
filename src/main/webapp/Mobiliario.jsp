@@ -1,8 +1,3 @@
-<%-- 
-    Document   : Mobiliario
-    Created on : 18/06/2022, 11:09:41 AM
-    Author     : MARIANA
---%>
 
 <%@page import="modelos.Mobiliario"%>
 <%@page import="java.util.List"%>
@@ -32,7 +27,7 @@
         .title {
             height: 10vh;
             margin-top: 10px;
-            margin-left: 28vw;
+            margin-left: 9vw;
             align-items: center;
             text-align: center;
             font-size: 2.5rem;
@@ -162,16 +157,16 @@
     %>
     <body class="body" bgcolor="#e0766e">
         <div class="header">
-            <div class="div_buton_reg">
+            <div class="div_buton_reg1">
                 <a href="menu.jsp" class="but_com">Regresar</a>
             </div>
             <div class="title">
                 <h1>Mobiliario</h1>
             </div>
-            <div class="nuevo">
+            <div class="div_buton_reg1">
                 <form method="GET" action="crearMobiliario.jsp">
                     <input type="hidden" name="permiso" value="true"/>
-                    <input class="btn btn_crear" type="submit" value="Nuevo"/>
+                    <input class="but_com" type="submit" value="Nuevo"/>
                 </form>
             </div>
         </div>

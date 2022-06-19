@@ -115,8 +115,8 @@
 
         System.out.println("ESTOY EN frontend CREAR autor");
     %>
-    <body>
-        <form class="div_reg" method="GET" action="AutorServlet" class="body" bgcolor="#e0766e">
+    <body class="body" bgcolor="#e0766e">
+        <form class="div_reg" method="GET" action="AutorServlet" >
             <h1 class="login_title">Crear autor</h1>
             <h3 class="login_text">ID (seudónimos) </h3>
             <input type="text" name="id_autor" class="entrada" value="" >

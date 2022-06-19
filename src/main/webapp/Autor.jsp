@@ -27,7 +27,7 @@
         .title{
             height: 10vh;
             margin-top: 10px;
-            margin-left: 28vw;
+            margin-left: 14vw;
             align-items: center;
             text-align: center;
             font-size: 2.5rem;
@@ -159,6 +159,12 @@
             display: flex;
             margin-left: 30px;
         }
+        
+        .div_buton_reg1 {
+            align-items: flex-end;
+            display: flex;
+            margin-left: 13vw;
+        }
 
         .but_Editar {
             background-color: #fac9c5;
@@ -183,22 +189,22 @@
     %>
     <body class="body" bgcolor="#e0766e">
         <div class="header">
-            <div class="div_buton_reg">
+            <div class="div_buton_reg1">
                 <a href="menu.jsp" class="but_com">Regresar</a>
             </div>
             <div class="title">
                 <h1>Autor</h1>
             </div>
+            <div class="div_buton_reg1">
+                <form method="GET" action="crearAutor.jsp">
+                    <input type="hidden" name="permiso" value="true" />
+                    <input class="but_com" type="submit" value="Nuevo"  href=""/>
+                </form
+            </div>
         </div>
 
 
         <div class="fondo">
-            <div class="nuevo">
-                <form method="GET" action="crearAutor.jsp">
-                    <input type="hidden" name="permiso" value="true"/>
-                    <input class="btn btn_crear" type="submit" value="Nuevo"/>
-                </form>
-            </div>
             <table>
                 <tr class="table-header">
                     <th>ID (seudónimo)</th>

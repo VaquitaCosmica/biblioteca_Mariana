@@ -29,7 +29,7 @@
         .title {
             height: 10vh;
             margin-top: 10px;
-            margin-left: 28vw;
+            margin-left: 10vw;
             align-items: center;
             text-align: center;
             font-size: 2.5rem;
@@ -115,7 +115,7 @@
         .div_buton_reg1 {
             align-items: flex-end;
             display: flex;
-            margin-left: 13vw;
+            margin-left: 7vw;
         }
 
         table {
@@ -160,7 +160,7 @@
     %>
     <body class="body" bgcolor="#e0766e">
         <div class="header">
-            <div class="div_buton_reg">
+            <div class="div_buton_reg1">
                 <a href="menu.jsp" class="but_com">Regresar</a>
             </div>
             <div class="title">

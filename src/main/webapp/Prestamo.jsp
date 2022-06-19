@@ -28,7 +28,7 @@
         .title {
             height: 10vh;
             margin-top: 10px;
-            margin-left: 28vw;
+            margin-left: 9vw;
             align-items: center;
             text-align: center;
             font-size: 2.5rem;
@@ -114,7 +114,7 @@
         .div_buton_reg1 {
             align-items: flex-end;
             display: flex;
-            margin-left: 22vw;
+            margin-left: 13vw;
         }
 
         table {
@@ -154,16 +154,18 @@
     %>
     <body class="body" bgcolor="#e0766e">
         <div class="header">
-            <div class="div_buton_reg">
+            <div class="div_buton_reg1">
                 <a href="menu.jsp" class="but_com">Regresar</a>
             </div>
             <div class="title">
                 <h1>Prestamos</h1>
             </div>
-            <form method="GET" action="PrestamoServlet">
-                <input type="hidden" name="operacion" value="PRECREAR" />
-                <input class="btn btn_crear" type="submit" value="Nuevo"  href=""/>
-            </form            
+            <div class="div_buton_reg1">
+                <form method="GET" action="PrestamoServlet">
+                    <input type="hidden" name="operacion" value="PRECREAR" />
+                    <input class="but_com" type="submit" value="Nuevo"  href=""/>
+                </form> 
+            </div>           
         </div>
         <div class="fondo">
 
@@ -181,31 +183,31 @@
 
                 <tr>
                     <% for (Alquila prestamo : prestamos) {%>
-                    <td class="celda"> <%= prestamo.getId_alquiler() %>
+                    <td class="celda"> <%= prestamo.getId_alquiler()%>
                     </td>
-                    <td class="celda"> <%= prestamo.getF_entrada() %>
+                    <td class="celda"> <%= prestamo.getF_entrada()%>
                     </td>
-                    <td class="celda"><%= prestamo.getF_salida() %> 
+                    <td class="celda"><%= prestamo.getF_salida()%> 
                     </td>
-                    <td class="celda"> <%= prestamo.getID_empleada() %>
+                    <td class="celda"> <%= prestamo.getID_empleada()%>
                     </td>
-                    <td class="celda"> <%= prestamo.getId_libro() %>
+                    <td class="celda"> <%= prestamo.getId_libro()%>
                     </td>
-                    <td class="celda"> <%= prestamo.getID_cliente() %>
+                    <td class="celda"> <%= prestamo.getID_cliente()%>
                     </td>
-                    
+
                     <td class="celda">                        
                         <!-- TODO: Usar ACTUALIZAR para esto. -->                       
                         <form method="GET" action="PrestamoServlet">
                             <input type="hidden" name="operacion" value="PREACTUALIZAR" />
-                            <input type="hidden" name="id_libro" value="<%= prestamo.getId_libro() %>" />
-                            <input type="hidden" name="f_entrada" value="<%= prestamo.getF_entrada() %>" />
-                            <input type="hidden" name="f_salida" value="<%= prestamo.getF_salida() %>" />
-                            <input type="hidden" name="ID_cliente" value="<%= prestamo.getID_cliente() %>" />
-                            <input type="hidden" name="ID_empleado" value="<%= prestamo.getID_empleada() %>" />
-                            <input type="hidden" name="id_alquiler" value="<%= prestamo.getId_alquiler() %>" />
-                            <input type="hidden" name="id_libro" value="<%= prestamo.getId_libro() %>" />
-                     
+                            <input type="hidden" name="id_libro" value="<%= prestamo.getId_libro()%>" />
+                            <input type="hidden" name="f_entrada" value="<%= prestamo.getF_entrada()%>" />
+                            <input type="hidden" name="f_salida" value="<%= prestamo.getF_salida()%>" />
+                            <input type="hidden" name="ID_cliente" value="<%= prestamo.getID_cliente()%>" />
+                            <input type="hidden" name="ID_empleado" value="<%= prestamo.getID_empleada()%>" />
+                            <input type="hidden" name="id_alquiler" value="<%= prestamo.getId_alquiler()%>" />
+                            <input type="hidden" name="id_libro" value="<%= prestamo.getId_libro()%>" />
+
                             <input class="btn but_Editar" type="submit" value="Editar"/>
                         </form>
                     </td>
@@ -213,7 +215,7 @@
 
                         <form method="GET" action="PrestamoServlet">
                             <input type="hidden" name="operacion" value="ELIMINAR" />
-                            <input type="hidden" name="id_alquiler" value="<%= prestamo.getId_alquiler() %>" />
+                            <input type="hidden" name="id_alquiler" value="<%= prestamo.getId_alquiler()%>" />
                             <input class="but_Eliminar" type="submit" value="Eliminar" />
                         </form>
                     </td>
